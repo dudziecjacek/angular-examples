@@ -1,0 +1,9 @@
+<div class="course-list-container">
+  <div *ngFor="let course of courses | keyvalue" class="course-card">
+    <ng-container *ngIf="course.value as course">
+      <img [src]="course.iconUrl" alt="" />
+      <a [routerLink]="course.url">{{ course.description }}</a>
+      <p>{{ course.longDescription }}</p>
+    </ng-container>
+  </div>
+</div>
